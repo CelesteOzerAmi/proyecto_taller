@@ -1,0 +1,65 @@
+header {
+
+    div{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1%;
+        margin-bottom: 1%;
+        border-bottom: 1px solid rgb(211, 208, 208);
+
+        a {
+            width: 12%;
+            height: 40px;
+        }
+    }
+}
+
+
+.container_main {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 10px;
+
+
+    h3 {
+        padding-top: 4%;
+        border-top: 1px solid rgb(221, 221, 221);
+        border-radius: 5px ;
+    }
+}
+
+
+.container_servicios {
+
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    padding-left: 10%;
+    gap: 60px;
+    width: 60%;
+
+    h3 {
+        padding-top: 5%;
+    }
+    
+}
+
+.input:valid {
+    border: 1px solid green;
+  }
+
+
+.imgdiv {
+    margin: 3% 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        padding: 5%;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 15px;
+    }
+}
