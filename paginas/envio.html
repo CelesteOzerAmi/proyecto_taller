@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../estilos/estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/estilo.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a type="button" class="btn btn-outline-dark" href="./index.html">Inicio</a>
-            <a type="button" class="btn btn-outline-dark" href="./empresa.html">Nosotros</a>
-            <a type="button" class="btn btn-outline-dark" href="./contacto.html">Contacto</a>
-            <a type="button" class="btn btn-outline-dark" href="./servicios.html">Servicios</a>
-            <a type="button" class="btn btn-outline-dark" href="./rastreo.html">Rastreo</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a type="button" class="btn btn-outline-dark" href="./index.html">Inicio</a></li>
+                    <li><a type="button" class="btn btn-outline-dark" href="./empresa.html">Nosotros</a></li>
+                    <li><a type="button" class="btn btn-outline-dark" href="./contacto.html">Contacto</a></li>
+                    <li><a type="button" class="btn btn-outline-dark" href="./servicios.html">Servicios</a></li>
+                    <li><a type="button" class="btn btn-outline-dark" href="./envio.html">Envíos</a></li>
+                    <li><a type="button" class="btn btn-outline-dark" href="./rastreo.html">Rastreo</a></li>
+                </ul>
+            </nav>
+
         </div>
 
     </header>
@@ -29,53 +35,82 @@
             <h2 class="text-body-secondary">
                 Crear un envío
             </h2>
-            <form class="row g-3 needs-validation">
-                <div class="col-md-4 position-relative">
-                    <label for="nomremitente" class="form-label">Nombre del remitente</label>
+            <small>Campos requeridos (*)</small>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-5 position-relative">
+                    <label for="nomremitente" class="form-label">Nombre del remitente <small>(*)</small></label>
                     <input type="text" class="form-control input" id="nomremitente" required>
+                    <div class="invalid-feedback">
+                        Ingrese el nombre del remitente.
+                    </div>
                 </div>
-                <div class="col-md-4 position-relative">
-                    <label for="dirremitente" class="form-label">Dirección del remitente</label>
+                <div class="col-md-5 position-relative">
+                    <label for="dirremitente" class="form-label">Dirección del remitente <small>(*)</small></label>
                     <input type="text" class="form-control input" id="dirremitente" required>
+                    <div class="invalid-feedback">
+                        Ingrese la dirección del remitente.
+                    </div>
                 </div>
                 <div class="col-md-6 position-relative">
-                    <label for="locremitente" class="form-label">Localidad</label>
+                    <label for="locremitente" class="form-label">Localidad <small>(*)</small></label>
                     <input type="text" class="form-control input" id="locremitente" required>
+                    <div class="invalid-feedback">
+                        Ingrese la localidad del remitente.
+                    </div>
                 </div>
-                <div class="col-md-3 position-relative">
-                    <label for="depremitente" class="form-label">Departamento</label>
+                <div class="col-md-4 position-relative">
+                    <label for="depremitente" class="form-label">Departamento <small>(*)</small></label>
                     <select class="form-select" id="depremitente" required>
                         <option selected disabled value="">Seleccionar</option>
                         <option>Montevideo</option>
                         <option>Paysandú</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Ingrese el departamento del remitente.
+                    </div>
                 </div>
-                <div class="col-md-4 position-relative">
-                    <label for="nomdestinatario" class="form-label">Nombre del destinatario</label>
+                <div class="col-md-5 position-relative">
+                    <label for="nomdestinatario" class="form-label">Nombre del destinatario <small>(*)</small></label>
                     <input type="text" class="form-control input" id="nomdestinatario" required>
+                    <div class="invalid-feedback">
+                        Ingrese el nombre del destinatario.
+                    </div>
                 </div>
-                <div class="col-md-4 position-relative">
-                    <label for="dirdestinatario" class="form-label">Dirección del destinatario</label>
+                <div class="col-md-5 position-relative">
+                    <label for="dirdestinatario" class="form-label">Dirección del destinatario
+                        <small>(*)</small></label>
                     <input type="text" class="form-control input" id="dirdestinatario" required>
+                    <div class="invalid-feedback">
+                        Ingrese la dirección del destinatario.
+                    </div>
                 </div>
                 <div class="col-md-6 position-relative">
-                    <label for="locdestinatario" class="form-label">Localidad</label>
+                    <label for="locdestinatario" class="form-label">Localidad <small>(*)</small></label>
                     <input type="text" class="form-control input" id="locdestinatario" required>
+                    <div class="invalid-feedback">
+                        Ingrese la localidad del destinatario.
+                    </div>
                 </div>
-                <div class="col-md-3 position-relative">
-                    <label for="depdestinatario" class="form-label">Departamento</label>
+                <div class="col-md-4 position-relative">
+                    <label for="depdestinatario" class="form-label">Departamento <small>(*)</small></label>
                     <select class="form-select" id="depdestinatario" required>
                         <option selected disabled value="">Seleccionar</option>
                         <option>Montevideo</option>
                         <option>Paysandú</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Ingrese el departamento del destinatario.
+                    </div>
                 </div>
                 <div class="col-md-3 position-relative">
-                    <label for="peso" class="form-label">Peso del paquete (kgs)</label>
-                    <input type="number" class="form-control" id="peso" required>
+                    <label for="peso" class="form-label">Peso del paquete (kgs) <small>(*)</small></label>
+                    <input type="number" class="form-control" id="peso" pattern="[0-9]{1,3}" required>
+                    <div class="invalid-feedback">
+                        Ingrese el peso del paquete.
+                    </div>
                 </div>
-                <div class="col-md-3 position-relative">
-                    <label class="form-label">Dimensiones del paquete</label>
+                <div class="col-md-3 position-relative dimensiones">
+                    <label class="form-label">Dimensiones del paquete (cms) <small>(*)</small></label>
                     <div>
                         <label for="largo">Largo</label>
                         <input type="number" class="form-control input" id="largo" required>
@@ -84,61 +119,67 @@
                         <label for="alto">Alto</label>
                         <input type="number" class="form-control input" id="alto" required>
                     </div>
-                </div>
-                <div>
-                    <label>Tipo de envío</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="normal" checked>
-                        <label class="form-check-label" for="normal">
-                            Normal
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="urgente">
-                        <label class="form-check-label" for="urgente">
-                            Urgente
-                        </label>
+                    <div class="invalid-feedback">
+                        Ingrese las dimensiones del paquete.
                     </div>
                 </div>
-
-                <div>
-                    <label>Medio de pago</label>
-                    <div class="form-check" required>
-                        <input class="form-check-input" type="checkbox" value="" id="credito">
-                        <label class="form-check-label" for="credito">
-                            Tarjeta de crédito
-                        </label>
+                <div class="checks">
+                    <div>
+                        <h3>Tipo de envío <small>(*)</small></h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="normal" checked>
+                            <label class="form-check-label" for="normal">
+                                Normal
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="urgente">
+                            <label class="form-check-label" for="urgente">
+                                Urgente
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="debito">
-                        <label class="form-check-label" for="debito">
-                            Tarjeta de débito
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="paypal">
-                        <label class="form-check-label" for="paypal">
-                            Paypal
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="transferencia">
-                        <label class="form-check-label" for="transferencia">
-                            Transferencia bancaria
-                        </label>
+                    <div>
+                        <h3>Medio de pago <small>(*)</small></h3>
+                        <div class="form-check" required>
+                            <input class="form-check-input" type="checkbox" value="" id="credito">
+                            <label class="form-check-label" for="credito">
+                                Tarjeta de crédito
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="debito">
+                            <label class="form-check-label" for="debito">
+                                Tarjeta de débito
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="paypal">
+                            <label class="form-check-label" for="paypal">
+                                Paypal
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transferencia">
+                            <label class="form-check-label" for="transferencia">
+                                Transferencia bancaria
+                            </label>
+                        </div>
                     </div>
                 </div>
-
-                <div class='input-group date' id='datetimepicker1'>
-                    <label for="fecha">Fecha</label>
+                <div class='input-group date fecha' id='datetimepicker1'>
+                    <label for="fecha">Fecha <small>(*)</small></label>
                     <input type='date' class="form-control input" id="fecha" required />
+                    <div class="invalid-feedback">
+                        Seleccione la fecha del envío.
+                    </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 instrucciones">
                     <label for="instrucciones" class="form-label">Instrucciones adicionales</label>
                     <textarea class="form-control" id="instrucciones" rows="3"></textarea>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit form</button>
+                    <button class="btn btn-outline-dark" type="submit">Completar envío</button>
                 </div>
             </form>
 
@@ -148,6 +189,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="../dominio/dominio.js"> </script>
 </body>
 
 </html>

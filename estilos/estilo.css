@@ -1,19 +1,101 @@
-header {
+body {
+    background-color: rgb(236, 241, 246);
+}
 
-    div{
+
+
+.navbar {
+
+    ul {
+        box-sizing: border-box;
+        width: 95%;
         display: flex;
-        justify-content: space-evenly;
-        padding: 1%;
-        margin-bottom: 1%;
-        border-bottom: 1px solid rgb(211, 208, 208);
+        justify-content: center;
 
-        a {
-            width: 12%;
-            height: 40px;
+        list-style: none;
+
+        li {
+
+            a {
+                border: 0px;
+                width: 10rem;
+                border-left: 1px solid rgb(184, 181, 181);
+                border-radius: 0px;
+                font-size: large;
+                font-weight: 200;
+            }
         }
     }
 }
 
+small {
+    font-style: italic;
+    font-weight: 100;
+    color: rgb(113, 113, 113);
+}
+
+form {
+    padding: 4% 0%;
+
+    .input:valid {
+        border: 1px solid green;
+    }
+
+
+    div {
+        label {
+            font-size: large;
+            font-weight: 200;
+        }
+
+
+        .btn {
+            border: 1px solid rgb(184, 181, 181);
+        }
+    }
+
+    .dimensiones {
+        margin-left: 15%;
+        box-sizing: border-box;
+        max-width: 20rem;
+    }
+
+    .checks {
+        padding: 5% 0%;
+        margin: 2% 0%;
+        width: 80%;
+        display: flex;
+        gap: 200px;
+        border-top: 1px solid rgb(184, 181, 181);
+        border-bottom: 1px solid rgb(184, 181, 181);
+
+        h3 {
+            margin: 5% 0%;
+            width: 100%;
+            font-size: larger;
+            font-weight: 200;
+        }
+    }
+
+    .fecha {
+        padding-bottom: 4%;
+        width: 50%;
+        gap: 50px;
+        align-items: center;
+
+        label {
+            font-size: larger;
+            font-weight: 200;
+        }
+    }
+
+    .instrucciones {
+        border-top: 1px solid rgb(184, 181, 181);
+        padding: 4% 0%;
+        width: 80%;
+    }
+
+}
 
 .container_main {
     display: flex;
@@ -24,9 +106,10 @@ header {
 
     h3 {
         padding-top: 4%;
-        border-top: 1px solid rgb(221, 221, 221);
-        border-radius: 5px ;
+        border-top: 1px solid rgb(184, 181, 181);
+        border-radius: 5px;
     }
+
 }
 
 
@@ -42,12 +125,11 @@ header {
     h3 {
         padding-top: 5%;
     }
-    
+
 }
 
-.input:valid {
-    border: 1px solid green;
-  }
+
+
 
 
 .imgdiv {
