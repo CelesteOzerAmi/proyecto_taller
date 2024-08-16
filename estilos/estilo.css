@@ -2,8 +2,6 @@ body {
     background-color: rgb(236, 241, 246);
 }
 
-
-
 .navbar {
 
     ul {
@@ -11,7 +9,6 @@ body {
         width: 95%;
         display: flex;
         justify-content: center;
-
         list-style: none;
 
         li {
@@ -129,9 +126,6 @@ form {
 }
 
 
-
-
-
 .imgdiv {
     margin: 3% 0%;
     width: 100%;
@@ -143,5 +137,23 @@ form {
         padding: 5%;
         border: 1px solid rgb(221, 221, 221);
         border-radius: 15px;
+    }
+}
+
+
+.navbar-footer {
+    border-top: 1px solid rgb(184, 181, 181);
+    width: 100%;
+    padding: 1%;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+        li {
+            font-size: smaller;
+        }
     }
 }
