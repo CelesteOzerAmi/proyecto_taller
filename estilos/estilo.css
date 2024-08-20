@@ -25,121 +25,192 @@ body {
     }
 }
 
-small {
-    font-style: italic;
-    font-weight: 100;
-    color: rgb(113, 113, 113);
-}
-
-form {
-    padding: 4% 0%;
-
-    .input:valid {
-        border: 1px solid green;
-    }
-
-
-    div {
-        label {
-            font-size: large;
-            font-weight: 200;
-        }
-
-
-        .btn {
-            border: 1px solid rgb(184, 181, 181);
-        }
-    }
-
-    .dimensiones {
-        margin-left: 15%;
-        box-sizing: border-box;
-        max-width: 20rem;
-    }
-
-    .checks {
-        padding: 5% 0%;
-        margin: 2% 0%;
-        width: 80%;
-        display: flex;
-        gap: 200px;
-        border-top: 1px solid rgb(184, 181, 181);
-        border-bottom: 1px solid rgb(184, 181, 181);
-
-        h3 {
-            margin: 5% 0%;
-            width: 100%;
-            font-size: larger;
-            font-weight: 200;
-        }
-    }
-
-    .fecha {
-        padding-bottom: 4%;
-        width: 50%;
-        gap: 50px;
-        align-items: center;
-
-        label {
-            font-size: larger;
-            font-weight: 200;
-        }
-    }
-
-    .instrucciones {
-        border-top: 1px solid rgb(184, 181, 181);
-        padding: 4% 0%;
-        width: 80%;
-    }
-
-}
-
 .container_main {
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     padding: 1%;
-    gap: 10px;
+    justify-content: space-between;
 
+
+    .imgdiv {
+        display: inline;
+        margin: 3% 0%;
+        width: 50%;
+
+        img {
+            width: 100%;
+            padding: 5%;
+            border: 1px solid rgb(221, 221, 221);
+            border-radius: 15px;
+        }
+
+
+    }
+
+    .div_main {
+        display: inline;
+        width: 40%;
+        align-self: center;
+        
+        h3 {
+            border-top: 1px solid rgb(184, 181, 181);
+            padding: 3% 0% 6% 0%;
+        }
+
+    }
+}
+
+.container_empresa {
+    margin: 3% 0%;
+
+    p {
+        box-sizing: border-box;
+        width: 70%;
+        text-align: justify;
+    }
 
     h3 {
-        padding-top: 4%;
-        border-top: 1px solid rgb(184, 181, 181);
-        border-radius: 5px;
+        margin-top: 5%;
     }
-
 }
 
+.container_contacto {
+
+    .form-contacto {
+        box-sizing: border-box;
+        width: 75%;
+        padding: 2%;
+
+        small {
+            font-style: italic;
+            font-weight: 100;
+            color: rgb(113, 113, 113);
+        }
+
+        div {
+            label {
+                font-size: large;
+                font-weight: 200;
+
+                small {
+                    font-size: smaller;
+                    font-style: italic;
+                    font-weight: 100;
+                    color: rgb(113, 113, 113);
+                }
+            }
+
+            input:valid {
+                border: 1px solid green;
+            }
+
+            .btn {
+                border: 1px solid rgb(184, 181, 181);
+            }
+        }
+    }
+}
 
 .container_servicios {
-
+    box-sizing: border-box;
+    width: 55%;
     display: flex;
     flex-direction: column;
     padding: 1%;
-    padding-left: 10%;
-    gap: 60px;
-    width: 60%;
 
     h3 {
-        padding-top: 5%;
-    }
-
-}
-
-
-.imgdiv {
-    margin: 3% 0%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    img {
-        padding: 5%;
-        border: 1px solid rgb(221, 221, 221);
-        border-radius: 15px;
+        padding-top: 15%;
+        padding-bottom: 5%;
+        font-weight: normal;
     }
 }
 
+.container_rastreo {
+    .rastreo_form {
+        div {
+            margin: 5% 0%;
+
+            label {
+                font-size: large;
+                font-weight: 400;
+            }
+
+            button {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.container_envio {
+    form {
+        padding: 3% 0%;
+    
+        small {
+            font-style: italic;
+            font-weight: 100;
+            color: rgb(113, 113, 113);
+        }
+    
+        div {
+            label {
+                font-size: large;
+                font-weight: 200;
+            }
+    
+            input:valid {
+                border: 1px solid green;
+            }
+
+            .btn {
+                border: 1px solid rgb(184, 181, 181);
+            }
+        }
+    
+        .dimensiones {
+            margin-left: 15%;
+            box-sizing: border-box;
+            max-width: 20rem;
+        }
+    
+        .checks {
+            padding: 5% 0%;
+            margin: 2% 0%;
+            width: 80%;
+            display: flex;
+            gap: 200px;
+            border-top: 1px solid rgb(184, 181, 181);
+            border-bottom: 1px solid rgb(184, 181, 181);
+    
+            h3 {
+                margin: 5% 0%;
+                width: 100%;
+                font-size: larger;
+                font-weight: 200;
+            }
+        }
+    
+        .fecha {
+            padding-bottom: 4%;
+            width: 50%;
+            gap: 50px;
+            align-items: center;
+    
+            label {
+                font-size: larger;
+                font-weight: 200;
+            }
+        }
+    
+        .instrucciones {
+            border-top: 1px solid rgb(184, 181, 181);
+            padding: 4% 0%;
+            width: 80%;
+        }
+    
+    }
+    
+}
 
 .navbar-footer {
     border-top: 1px solid rgb(184, 181, 181);
@@ -156,4 +227,115 @@ form {
             font-size: smaller;
         }
     }
+}
+
+@media (max-width: 767px) {
+
+    header {
+        box-sizing: border-box;
+        width: 99%;
+
+        div {
+
+            .navbar {
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        width: 15%;
+
+                        a {
+                            box-sizing: border-box;
+                            width: 100%;
+                            border-left: 1px solid rgb(184, 181, 181);
+                            font-size: smaller;
+                            font-weight: 400;
+                            padding: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container_main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        gap: 5vh;
+        align-items: center;
+
+        .imgdiv {
+            display: block;
+            margin: 3% 0%;
+            width: 90%;
+
+            img {
+                width: 100%;
+                padding: 1%;
+                border: 1px solid rgb(221, 221, 221);
+                border-radius: 15px;
+            }
+
+
+        }
+
+        .div_main {
+            display: block;
+            width: 90%;
+            align-self: center;
+
+
+            h3 {
+                border-top: 1px solid rgb(184, 181, 181);
+            }
+
+            div {
+                width: 90%;
+                gap: 5vh
+            }
+
+        }
+    }
+
+    .container_empresa {
+
+        p {
+            width: 95%;
+        }
+    }
+
+    .container_contacto {
+
+        .form-contacto {
+            width: 95%;
+            padding: 1%;
+        }
+    }
+
+    .container_servicios {
+        width: 90%;
+    }
+
+    .container_rastreo {
+        .rastreo_form {
+            margin: 15% 0%;
+
+            div {
+                box-sizing: border-box;
+                margin: 5% 0%;
+                width: 70%;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 }
