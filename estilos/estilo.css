@@ -1,5 +1,7 @@
 body {
     background-color: rgb(236, 241, 246);
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 .navbar {
@@ -27,19 +29,28 @@ body {
 
 .container_main {
     box-sizing: border-box;
+    height: 85vh;
     display: flex;
     padding: 1%;
     justify-content: space-between;
-
+    padding-bottom: 10%;
 
     .imgdiv {
         display: inline;
         margin: 3% 0%;
         width: 50%;
+        align-self: center;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 400;
+            margin-bottom: 5%;
+            margin-left: 2%;
+        }
 
         img {
-            width: 100%;
-            padding: 5%;
+            width: 95%;
+            padding: 1%;
             border: 1px solid rgb(221, 221, 221);
             border-radius: 15px;
         }
@@ -49,9 +60,9 @@ body {
 
     .div_main {
         display: inline;
-        width: 40%;
+        width: 45%;
         align-self: center;
-        
+
         h3 {
             border-top: 1px solid rgb(184, 181, 181);
             padding: 3% 0% 6% 0%;
@@ -75,6 +86,8 @@ body {
 }
 
 .container_contacto {
+    box-sizing: border-box;
+    height: 85vh;
 
     .form-contacto {
         box-sizing: border-box;
@@ -113,6 +126,7 @@ body {
 
 .container_servicios {
     box-sizing: border-box;
+    height: 75vh;
     width: 55%;
     display: flex;
     flex-direction: column;
@@ -126,6 +140,9 @@ body {
 }
 
 .container_rastreo {
+    box-sizing: border-box;
+    height: 85vh;
+
     .rastreo_form {
         div {
             margin: 5% 0%;
@@ -143,45 +160,49 @@ body {
 }
 
 .container_envio {
+
     form {
         padding: 3% 0%;
-    
+        column-gap: 60px;
+
         small {
             font-style: italic;
             font-weight: 100;
             color: rgb(113, 113, 113);
         }
-    
+
         div {
             label {
                 font-size: large;
                 font-weight: 200;
             }
-    
+
             input:valid {
                 border: 1px solid green;
             }
 
             .btn {
                 border: 1px solid rgb(184, 181, 181);
+                margin-bottom: 5%;
             }
         }
-    
+
         .dimensiones {
-            margin-left: 15%;
-            box-sizing: border-box;
             max-width: 20rem;
         }
-    
+
         .checks {
-            padding: 5% 0%;
-            margin: 2% 0%;
+            padding: 3% 0%;
+            margin: 5% 0%;
             width: 80%;
             display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
             gap: 200px;
             border-top: 1px solid rgb(184, 181, 181);
             border-bottom: 1px solid rgb(184, 181, 181);
-    
+
             h3 {
                 margin: 5% 0%;
                 width: 100%;
@@ -189,47 +210,62 @@ body {
                 font-weight: 200;
             }
         }
-    
+
         .fecha {
             padding-bottom: 4%;
-            width: 50%;
+            width: 80%;
             gap: 50px;
-            align-items: center;
-    
+            border-bottom: 1px solid rgb(184, 181, 181);
+
             label {
                 font-size: larger;
                 font-weight: 200;
             }
+
+            input {
+                max-width: 20%;
+            }
         }
-    
+
         .instrucciones {
-            border-top: 1px solid rgb(184, 181, 181);
-            padding: 4% 0%;
-            width: 80%;
+            padding: 3% 0%;
+            width: 60%;
         }
-    
+
     }
-    
+
 }
 
-.navbar-footer {
-    border-top: 1px solid rgb(184, 181, 181);
-    width: 100%;
-    padding: 1%;
+footer {
 
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
+    .container {
+        box-sizing: border-box;
+        width: 100vw;
 
-        li {
-            font-size: smaller;
+        .navbar-footer {
+            border-top: 1px solid rgb(184, 181, 181);
+            width: 100%;
+            padding: 1% 0;
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+
+                li {
+                    font-size: smaller;
+                }
+            }
         }
     }
 }
 
 @media (max-width: 767px) {
+
+    body {
+        margin: 2%;
+    }
 
     header {
         box-sizing: border-box;
@@ -264,11 +300,13 @@ body {
 
     .container_main {
         box-sizing: border-box;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         padding: 5%;
         gap: 5vh;
         align-items: center;
+        justify-content: space-evenly;
 
         .imgdiv {
             display: block;
@@ -305,37 +343,130 @@ body {
 
     .container_empresa {
 
+        h3 {
+            margin-top: 15%;
+        }
+
         p {
             width: 95%;
+            margin: 5% 0;
         }
     }
 
     .container_contacto {
 
+        h2 {
+            margin: 5% 0;
+            font-weight: 400;
+        }
+
         .form-contacto {
+
             width: 95%;
-            padding: 1%;
+            padding-top: 10%;
         }
     }
 
     .container_servicios {
+        height: 60vh;
         width: 90%;
     }
 
+    .container_envio {
+        form {
+
+            .dimensiones {
+                margin-left: 0%;
+                max-width: none;
+                margin-bottom: 5%;
+            }
+
+            .checks {
+                width: 99%;
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 3%;
+                align-items: start;
+            }
+
+            .fecha {
+                width: 99%;
+                gap: 0px;
+                justify-content: space-between;
+
+                input {
+                    max-width: 50%;
+                }
+            }
+
+            .instrucciones {
+                margin: 5% 3%;
+                width: 95%;
+                border-bottom: 1px solid rgb(184, 181, 181);
+            }
+
+            div {
+
+                .btn {
+                    width: 70%;
+                    margin: 0% 10% 10% 15%;
+                }
+            }
+        }
+
+    }
+
     .container_rastreo {
+        height: 70vh;
+        text-align: center;
+
+        h2 {
+            margin: 10%;
+        }
+
         .rastreo_form {
-            margin: 15% 0%;
+
+            padding: 5% 0%;
 
             div {
                 box-sizing: border-box;
                 margin: 5% 0%;
-                width: 70%;
+                width: 99%;
+
+                label {
+                    margin-bottom: 5%;
+                }
 
                 button {
                     width: 100%;
+                    margin-top: 5%;
                 }
             }
         }
     }
 
+    footer {
+
+        .container {
+
+
+            .navbar-footer {
+
+                padding-top: 5%;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    padding: 0;
+
+                    li {
+                        text-align: center;
+                        font-size: smaller;
+                    }
+                }
+            }
+        }
+    }
 }
