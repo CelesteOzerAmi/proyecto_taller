@@ -89,12 +89,27 @@ body {
         h3 {
             margin-top: 5%;
         }
+
+        .equipo {
+            padding: 0px;
+            margin: 0px;
+
+            img {
+                width: 40%;
+                margin: 3% 0;
+                border: 1px solid rgb(184, 181, 181);
+                border-radius: 5px;
+            }
+        }
     }
 }
 
 .container_contacto {
     box-sizing: border-box;
-    height: 85vh;
+
+    .datos_contacto {
+        padding: 2%;
+    }
 
     .form-contacto {
         box-sizing: border-box;
@@ -305,7 +320,6 @@ footer {
         }
     }
 
-
     .container_main {
         box-sizing: border-box;
         height: 80vh;
@@ -370,6 +384,14 @@ footer {
                 width: 95%;
                 margin: 5% 0;
             }
+
+            .equipo {
+    
+                img {
+                    width: 85%;
+                    margin: 6%;
+                }
+            }
         }
     }
 
@@ -383,6 +405,13 @@ footer {
         h2 {
             margin: 5% 0;
             font-weight: 400;
+        }
+
+        .datos_contacto {
+            padding: 5%;
+            text-align: center;
+            border: 1px solid rgb(184, 181, 181);
+            border-radius: 5px;
         }
 
         .form-contacto {
