@@ -16,7 +16,7 @@
         <div class="container">
             <nav class="navbar">
                 <ul>
-                    <li><a type="button" class="btn btn-outline-dark" href="./index.html">Inicio</a></li>
+                    <li><a type="button" class="btn btn-outline-dark" href="../index.html">Inicio</a></li>
                     <li><a type="button" class="btn btn-outline-dark" href="./empresa.html">Nosotros</a></li>
                     <li><a type="button" class="btn btn-outline-dark" href="./contacto.html">Contacto</a></li>
                     <li><a type="button" class="btn btn-outline-dark" href="./servicios.html">Servicios</a></li>
@@ -31,21 +31,28 @@
         <div class="container container_contacto">
             <h1>Te Mando</h1>
             <h2 class="text-body-secondary">Completá el formulario y nos pondremos en contacto!</h2>
-
-            <div id="datosContacto"></div>
             <form class="form-contacto" novalidate>
                 <small>Campos requeridos (*)</small>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre <small>(*)</small></label>
                     <input type="text" class="form-control" id="nombre" placeholder="Juan Perez" required>
+                    <div class="invalid-feedback">
+                        Ingrese su nombre.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo electrónico <small>(*)</small></label>
                     <input type="email" class="form-control" id="email" placeholder="juan@ejemplo.com" required>
+                    <div class="invalid-feedback">
+                        Ingrese su correo electrónico.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono <small>(*)</small></label>
                     <input type="number" class="form-control" id="telefono" required>
+                    <div class="invalid-feedback">
+                        Ingrese su teléfono.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="texto" class="form-label">Motivo de contacto</label>
