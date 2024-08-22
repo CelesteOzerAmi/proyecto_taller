@@ -73,6 +73,7 @@
 
     // se toma el elemento formulario desde el html
     const formRastreo = document.querySelectorAll('.rastreo_form');
+    let detallesRastreo = document.getElementById('detallesRastreo');
 
     // se añade un event listener al seleccionar enviar en el formulario
     Array.from(formRastreo).forEach(form => {
@@ -82,18 +83,17 @@
             // cancela el envío por defecto de los datos, y se indica al usuario
             // mediante un alert
             if (!form.checkValidity()) {
-                alert("El número de rastreo debe contener 7 dígitos")
-                div.innerHTML = ""
                 event.preventDefault()
                 event.stopPropagation()
+                alert("El número de rastreo debe contener 7 dígitos")
+                detallesRastreo.innerHTML = ""
             };
 
             // si los campos completados en el formulario son correctos, se indica al usuario 
             // mediante un alert, que el envío fue realizado correctamente. 
             if (form.checkValidity()) {
-                let div = document.getElementById('detallesRastreo')
-                div.innerHTML = ""
-                div.innerHTML = `<h3>Datos del envío</h3> <br> 
+                detallesRastreo.innerHTML = ""
+                detallesRastreo.innerHTML = `<h3>Datos del envío</h3> <br> 
                 <br><h4>Estado del envío: en camino</h4> `
                 event.preventDefault()
                 event.stopPropagation()     

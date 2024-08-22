@@ -10,18 +10,21 @@ body {
         box-sizing: border-box;
         width: 95%;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         list-style: none;
 
         li {
 
             a {
-                border: 0px;
-                width: 10rem;
-                border-left: 1px solid rgb(184, 181, 181);
-                border-radius: 0px;
+                text-decoration: none;
+                color: black;
                 font-size: large;
                 font-weight: 200;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+                font-weight: 400;
             }
         }
     }
@@ -72,16 +75,20 @@ body {
 }
 
 .container_empresa {
-    margin: 3% 0%;
 
-    p {
-        box-sizing: border-box;
-        width: 70%;
-        text-align: justify;
-    }
+    .empresa {
 
-    h3 {
-        margin-top: 5%;
+        margin: 3% 0%;
+
+        p {
+            box-sizing: border-box;
+            width: 70%;
+            text-align: justify;
+        }
+
+        h3 {
+            margin-top: 5%;
+        }
     }
 }
 
@@ -125,17 +132,21 @@ body {
 }
 
 .container_servicios {
-    box-sizing: border-box;
-    height: 75vh;
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    padding: 1%;
 
-    h3 {
-        padding-top: 15%;
-        padding-bottom: 5%;
-        font-weight: normal;
+    .servicios {
+
+        box-sizing: border-box;
+        height: 75vh;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+
+        h3 {
+            padding-top: 15%;
+            padding-bottom: 5%;
+            font-weight: normal;
+        }
     }
 }
 
@@ -150,6 +161,10 @@ body {
             label {
                 font-size: large;
                 font-weight: 400;
+            }
+
+            input:valid {
+                border: 1px solid green;
             }
 
             button {
@@ -267,36 +282,29 @@ footer {
         margin: 2%;
     }
 
-    header {
-        box-sizing: border-box;
-        width: 99%;
+    .navbar {
 
-        div {
+        ul {
+            display: block;
+            margin-top: 5%;
+            padding-left: 2%;
+            width: 100%;
 
-            .navbar {
+            li {
+                margin: 2% 0;
 
-                ul {
-                    display: flex;
-                    justify-content: center;
-                    list-style: none;
-                    padding: 0;
+                a {
+                    font-size: medium;
+                    font-weight: 400;
+                }   
 
-                    li {
-                        width: 15%;
-
-                        a {
-                            box-sizing: border-box;
-                            width: 100%;
-                            border-left: 1px solid rgb(184, 181, 181);
-                            font-size: smaller;
-                            font-weight: 400;
-                            padding: 0px;
-                        }
-                    }
+                a:hover {
+                    font-weight: 500;
                 }
             }
         }
     }
+
 
     .container_main {
         box-sizing: border-box;
@@ -312,6 +320,10 @@ footer {
             display: block;
             margin: 3% 0%;
             width: 90%;
+
+            h1 {
+                font-size: 3rem;
+            }
 
             img {
                 width: 100%;
@@ -343,17 +355,30 @@ footer {
 
     .container_empresa {
 
+        h1,
+        h2,
         h3 {
-            margin-top: 15%;
+            text-align: center;
         }
 
-        p {
-            width: 95%;
-            margin: 5% 0;
+        .empresa {
+            h3 {
+                margin-top: 15%;
+            }
+
+            p {
+                width: 95%;
+                margin: 5% 0;
+            }
         }
     }
 
     .container_contacto {
+
+        h1,
+        h2 {
+            text-align: center;
+        }
 
         h2 {
             margin: 5% 0;
@@ -361,18 +386,31 @@ footer {
         }
 
         .form-contacto {
-
             width: 95%;
             padding-top: 10%;
         }
     }
 
     .container_servicios {
-        height: 60vh;
-        width: 90%;
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .servicios {
+            height: 60vh;
+            width: 90%;
+        }
     }
 
     .container_envio {
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
         form {
 
             .dimensiones {
